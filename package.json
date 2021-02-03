@@ -1,0 +1,31 @@
+{
+  "name": "timetable-app",
+  "version": "1.0.0",
+  "description": "Simple University timetable webapp",
+  "main": "index.js",
+  "repository": "https://github.com/tommitchelmore/timetable-app",
+  "author": "Thomas Mitchelmore",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "argon2": "^0.27.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.14",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.1",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "dev": "nodemon -x babel-node src/index.js",
+    "build": "babel ./src --out-dir ./dist --source-maps --copy-files",
+    "serve": "node -r dotenv/config dist/index.js"
+  }
+}
